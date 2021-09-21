@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Tangerine:wght@700&display=swap');
+
+#title {
+    font-family: 'Alegreya';
+    font-size: 60px;
+}
+
+h4 {
+    text-align: center;
+}
+
+ul {
+    justify-content: center;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+.dateButton {
+    margin-right: 10px;
+    background-color: #9b0000;
+    color:rgb(255, 255, 255);
+}
+
+.dateButtonGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.submitButton {
+    background-color: #009b15;
+    color: rgb(255, 255, 255);
+    width: 100px;
+    margin-right: 10px;
+}
+
+.seatButton {
+    background-color: #009b15;
+    color: rgba(255, 255, 255, 0.925);
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.editButton {
+    background-color: rgb(238, 255, 0);
+    color: rgb(0, 0, 0);
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.findButton {
+    background-color: #009b15;
+    color: white;
+    width: 100px;
+}
+
+.clearButton {
+    background-color: #00a8be;
+    color: white;
+    width: 70px;
+}
+
+.cancelButton {
+    background-color: #9b0000;
+    color: white;
+    width: 100px;
+}
