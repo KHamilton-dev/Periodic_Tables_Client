@@ -1,4 +1,10 @@
 .side-bar {
   background: #161415 url(../stock_restaurant.jpg) no-repeat top;
+  height: 100vh;
   min-width: 360px;
+}
+
+.bg {
+  background-color: blanchedalmond;
+  height: 100vh;
 }

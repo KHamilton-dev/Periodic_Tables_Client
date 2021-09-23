@@ -13,7 +13,7 @@ import "./Layout.css";
  */
 function Layout() {
   return (
-    <div className="container-fluid" style={{ backgroundColor: "blanchedalmond" }}>
+    <div className="container-fluid bg">
       <div className="row h-100">
         <div className="col-md-2 side-bar" style={{ paddingBottom: 10 }}>
           <Menu />
