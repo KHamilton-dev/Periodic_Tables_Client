@@ -31,15 +31,14 @@ function Tables({ tables }) {
   if (tables.length) {
     sortedTables = tables.map((table, index) => {
       return (
-        <div key={index}>
-          <hr />
-          <h6>Table: {table.table_name}</h6>
+        <div key={index} style={{ textAlign: "center" }}>
+          <h6>{table.table_name}</h6>
           {table.reservation_id ? (
             <div>
               <h6 data-table-id-status={table.table_id}>
                 Occupied</h6>
               <button
-                className="btn btn-info"
+                className="btn btn-danger"
                 data-table-id-finish={table.table_id}
                 style={{ marginTop: 5 }}
                 onClick={() => finishButton(table)}
@@ -50,6 +49,7 @@ function Tables({ tables }) {
           ) : (
             <h6 data-table-id-status={table.table_id}>Free</h6>
           )}
+          <hr />
         </div>
       );
     });

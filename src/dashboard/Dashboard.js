@@ -36,7 +36,12 @@ function Dashboard({ date }) {
   return (
     <main className="container">
       <br />
-      <h1 className="row justify-content-center" style={{ marginBottom: 25 }}>Dashboard</h1>
+      <h1
+        className="row justify-content-center"
+        style={{ marginLeft: 10, marginBottom: 25 }}
+      >
+        Dashboard
+      </h1>
       <div className="dateButtonGroup">
         <button
           className="btn btn-primary"
@@ -44,13 +49,11 @@ function Dashboard({ date }) {
         >
           Previous
         </button>
-        <button 
-        className="btn btn-primary" 
-        onClick={() => history.push("/")}>
+        <button className="btn btn-success" onClick={() => history.push("/")}>
           Today
         </button>
         <button
-          className="btn btn-primary "
+          className="btn btn-primary"
           onClick={() => history.push(`/dashboard?date=${next(date)}`)}
         >
           Next
@@ -58,12 +61,23 @@ function Dashboard({ date }) {
       </div>
       <br />
       <h4 style={{ marginBottom: 30 }}>Reservations for {date}</h4>
-      <ErrorAlert error={reservationsError} />
-      <Reservations reservations={reservations} />
-      <hr />
-      <h4 justify-content="center">Tables</h4>
-      <ErrorAlert error={tablesError} />
-      <Tables tables={tables} />
+      <div className="row">
+        <div className="col-6">
+          <hr />
+          <h4 justify-content="center">Reservations</h4>
+          <ErrorAlert error={reservationsError} />
+          <Reservations reservations={reservations} />
+          <hr />
+        </div>
+        <div className="col-1"></div>
+        <div className="col-3">
+          <hr />
+          <h4 justify-content="center">Tables</h4>
+          <hr />
+          <ErrorAlert error={tablesError} />
+          <Tables tables={tables} />
+        </div>
+      </div>
     </main>
   );
 }
