@@ -39,18 +39,18 @@ function Dashboard({ date }) {
       <h1 className="row justify-content-center" style={{ marginBottom: 25 }}>Dashboard</h1>
       <div className="dateButtonGroup">
         <button
-          className="dateButton"
+          className="btn btn-primary"
           onClick={() => history.push(`/dashboard?date=${previous(date)}`)}
         >
           Previous
         </button>
         <button 
-        className="dateButton" 
+        className="btn btn-primary" 
         onClick={() => history.push("/")}>
           Today
         </button>
         <button
-          className="dateButton"
+          className="btn btn-primary "
           onClick={() => history.push(`/dashboard?date=${next(date)}`)}
         >
           Next

@@ -39,7 +39,7 @@ function Tables({ tables }) {
               <h6 data-table-id-status={table.table_id}>
                 Occupied</h6>
               <button
-                className="clearButton"
+                className="btn btn-info"
                 data-table-id-finish={table.table_id}
                 style={{ marginTop: 5 }}
                 onClick={() => finishButton(table)}

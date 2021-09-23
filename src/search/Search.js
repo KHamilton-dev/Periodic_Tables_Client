@@ -41,7 +41,7 @@ function Search() {
           onChange={handleMobileNumberChange}
         />
         <br/>
-        <button className="findButton" type="submit" style={{ marginTop: 30, marginBottom: 30 }}>Find</button>
+        <button className="btn btn-info" type="submit" style={{ marginTop: 30, marginBottom: 30 }}>Find</button>
         <ErrorAlert error={reservationsError} />
         {ifFound}
       </form>

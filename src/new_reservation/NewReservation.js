@@ -142,10 +142,8 @@ function NewReservation() {
           />
         </div>
         <br/>
-        <button className="submitButton" type="submit">Submit</button>
-        <button className="cancelButton" type="button" onClick={() => history.goBack()}>
-          Cancel
-        </button>
+        <button className="btn btn-success" style={{ marginRight: 10 }} type="submit">Submit</button>
+        <button className="btn btn-danger" onClick={() => history.goBack()}>Cancel</button>
         <br />
         <br />
         <ErrorAlert error={newReservationError} />

@@ -49,22 +49,23 @@ function Reservations({ reservations }) {
         return (
           <div key={reservation.reservation_id}>
             <hr />
-            <div className="row" style={{ marginTop: 25 }}>
+            <div className="row align-items-center" style={{ marginTop: 25 }}>
               <div className="col-6">
                 <h5>
                   {reservation.first_name} {reservation.last_name}{" "}
                   {reservation.reservation_time.slice(0, -3)}
                 </h5>
                 <h5>Party of {reservation.people}</h5>
-                <h5 data-reservation-id-status={reservation.reservation_id} style={{ marginTop: 20 }}>
-                  * {reservation.status.charAt(0).toUpperCase() + reservation.status.slice(1)} *
+                <h5 data-reservation-id-status={reservation.reservation_id} style={{ marginTop: 30 }}>
+                   {reservation.status.charAt(0).toUpperCase() + reservation.status.slice(1)} 
                 </h5>
               </div>
               {reservation.status === "booked" ? (
-                <div className="col-2">
+                <div className="col-3">
                   <div className="row">
                     <button
-                      className="seatButton"
+                      className="btn btn-success"
+                      style={{ marginBottom: 5 }}
                       onClick={() =>
                         history.push(
                           `/reservations/${reservation.reservation_id}/seat`
@@ -76,7 +77,8 @@ function Reservations({ reservations }) {
                   </div>
                   <div className="row">
                     <button
-                      className="editButton"
+                      className="btn btn-warning"
+                      style={{ marginBottom: 5 }}
                       onClick={() =>
                         history.push(
                           `/reservations/${reservation.reservation_id}/edit`
@@ -88,7 +90,8 @@ function Reservations({ reservations }) {
                   </div>
                   <div className="row">
                     <button
-                      className="cancelButton"
+                      className="btn btn-danger"
+                      style={{ marginBottom: 5 }}
                       data-reservation-id-cancel={reservation.reservation_id}
                       onClick={() => cancelClickHandler(reservation)}
                     >

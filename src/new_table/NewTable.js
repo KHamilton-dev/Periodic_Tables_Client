@@ -59,10 +59,11 @@ function NewTable() {
           onChange={capacityChangeHandler}
         />
         </div>
-        <button className="submitButton" type="submit" style={{ marginTop: 15 }}>
+        <br/>
+        <button className="btn btn-success" style={{ marginRight: 10 }} type="submit">
           Submit
         </button>
-        <button className="cancelButton" type="button" onClick={history.goBack}>
+        <button className="btn btn-danger" type="button" onClick={history.goBack}>
           Cancel
         </button>
         <br />
