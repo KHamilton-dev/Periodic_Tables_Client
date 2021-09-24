@@ -94,95 +94,91 @@ export default function EditReservation() {
     <div className="container">
       <h1 style={{ marginTop: 15, marginBottom: 15 }}>Edit Reservation</h1>
       <form onSubmit={handleSubmit}>
-        <div className="row">
-          <label className="col-4" htmlFor="first_name">
-            First Name:
-          </label>
-          <input
-            className="col-4"
-            id="first_name"
-            type="text"
-            name="first_name"
-            value={first_name}
-            onChange={handleFirstNameChange}
-          />
-        </div>
-        <div className="row">
-          <label className="col-4" htmlFor="last_name">
-            Last Name:
-          </label>
-          <input
-            className="col-4"
-            id="last_name"
-            type="text"
-            name="last_name"
-            value={last_name}
-            onChange={handleLastNameChange}
-          />
-        </div>
-        <div className="row">
-          <label className="col-4" htmlFor="mobile_number">
-            Mobile Number:
-          </label>
-          <input
-            className="col-4"
-            id="mobile_number"
-            type="text"
-            name="mobile_number"
-            value={mobile_number}
-            onChange={handleMobileNumberChange}
-          />
-        </div>
-        <div className="row">
-          <label className="col-4" htmlFor="reservation_date">
-            Reservation Date:
-          </label>
-          <input
-            className="col-4"
-            id="reservation_date"
-            type="date"
-            name="reservation_date"
-            value={reservation_date}
-            onChange={handleReservationDateChange}
-          />
-        </div>
-        <div className="row">
-          <label className="col-4" htmlFor="reservation_time">
-            Reservation Time:
-          </label>
-          <input
-            className="col-4"
-            id="reservation_time"
-            type="time"
-            step="900"
-            name="reservation_time"
-            value={reservation_time}
-            onChange={handleReservationTimeChange}
-          />
-        </div>
-        <div className="row">
-          <label className="col-4" htmlFor="people">
-            People:
-          </label>
-          <input
-            className="col-2"
-            id="people"
-            type="number"
-            min="1"
-            name="people"
-            value={people}
-            onChange={handlePeopleChange}
-          />
-        </div>
+        <label htmlFor="first_name">First Name:</label>
         <br />
-        <button className="submitButton" type="submit">
+        <input
+          id="first_name"
+          type="text"
+          name="first_name"
+          value={first_name}
+          onChange={handleFirstNameChange}
+          style={{ marginBottom: 5 }}
+        />
+        <br />
+        <label htmlFor="last_name">Last Name:</label>
+        <br />
+        <input
+          id="last_name"
+          type="text"
+          name="last_name"
+          value={last_name}
+          onChange={handleLastNameChange}
+          style={{ marginBottom: 5 }}
+        />
+        <br />
+        <label htmlFor="mobile_number">
+          Mobile Number:
+        </label>
+        <br />
+        <input
+          id="mobile_number"
+          type="text"
+          name="mobile_number"
+          value={mobile_number}
+          onChange={handleMobileNumberChange}
+          style={{ marginBottom: 5 }}
+        />
+        <br />
+        <label htmlFor="reservation_date">
+          Reservation Date:
+        </label>
+        <br />
+        <input
+          id="reservation_date"
+          type="date"
+          name="reservation_date"
+          value={reservation_date}
+          onChange={handleReservationDateChange}
+          style={{ marginBottom: 5 }}
+        />
+        <br />
+        <label htmlFor="reservation_time">
+          Reservation Time:
+        </label>
+        <br />
+        <input
+          id="reservation_time"
+          type="time"
+          step="900"
+          name="reservation_time"
+          value={reservation_time}
+          onChange={handleReservationTimeChange}
+          style={{ marginBottom: 5 }}
+        />
+        <br />
+        <label htmlFor="people">
+          People:
+        </label>
+        <br />
+        <input
+          id="people"
+          type="number"
+          min="1"
+          name="people"
+          value={people}
+          onChange={handlePeopleChange}
+          style={{ width: 50 }}
+        />
+        <br/>
+        <br />
+        <button
+          className="btn btn-success"
+          style={{ marginRight: 10 }}
+          type="submit"
+        >
           Submit
         </button>
-        <button
-          className="cancelButton"
-          type="button"
-          onClick={() => history.goBack()}
-        >
+        <button className="btn btn-danger" onClick={() => history.goBack()}>
           Cancel
         </button>
         <br />

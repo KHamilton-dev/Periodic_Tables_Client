@@ -38,7 +38,7 @@ function NewTable() {
       <h1 style={{ marginTop: 15, marginBottom: 15 }}>New Table</h1>
       <form onSubmit={handleSubmit}>
         <div className="row">
-        <label className="col-4" htmlFor="table_name">Table Name: </label>
+        <label className="col-4" htmlFor="table_name">Name: </label>
         <input
         className="col-4"
           id="table_name"
