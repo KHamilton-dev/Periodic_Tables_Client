@@ -23,7 +23,7 @@ function Menu() {
           </div>
         </Link>
 
-        <ul className="nav navbar-nav text-light flex-row" style={{ marginBottom: 20 }} id="accordionSidebar">
+        <ul className="nav navbar-nav text-light flex-row" style={{ marginBottom: 20, marginLeft: 20 }} id="accordionSidebar">
           <li className="nav-item">
             <a className="nav-link" href="/dashboard">
               <span className="oi oi-dashboard" />

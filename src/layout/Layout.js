@@ -2,7 +2,7 @@ import React from "react";
 import Menu from "./Menu";
 import Routes from "./Routes";
 
-import "./Layout.css";
+import "../App.css";
 
 /**
  * Defines the main layout of the application.
@@ -14,7 +14,7 @@ import "./Layout.css";
 function Layout() {
   return (
     <div className="container-fluid bg">
-      <div className="row h-100">
+      <div className="row">
         <div className="col-md-2 side-bar" style={{ paddingBottom: 10 }}>
           <Menu />
         </div>

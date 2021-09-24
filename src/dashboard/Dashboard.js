@@ -5,7 +5,7 @@ import { previous, next } from "../utils/date-time";
 import { useHistory } from "react-router-dom";
 import Reservations from "./Reservations";
 import Tables from "./Tables";
-import "./Dashboard.css";
+import "../App.css";
 
 /**
  * Defines the dashboard page.
@@ -14,7 +14,6 @@ import "./Dashboard.css";
  * @returns {JSX.Element}
  */
 function Dashboard({ date }) {
-  console.log(date);
   const [reservations, setReservations] = useState([]);
   const [reservationsError, setReservationsError] = useState(null);
   const [tables, setTables] = useState([]);
@@ -38,7 +37,7 @@ function Dashboard({ date }) {
       <br />
       <h1
         className="row justify-content-center"
-        style={{ marginLeft: 10, marginBottom: 25 }}
+        style={{ marginBottom: 25 }}
       >
         Dashboard
       </h1>
@@ -49,7 +48,9 @@ function Dashboard({ date }) {
         >
           Previous
         </button>
-        <button className="btn btn-success" onClick={() => history.push("/")}>
+        <button 
+        className="btn btn-success" 
+        onClick={() => history.push("/")}>
           Today
         </button>
         <button
@@ -60,17 +61,17 @@ function Dashboard({ date }) {
         </button>
       </div>
       <br />
-      <h4 style={{ marginBottom: 30 }}>Reservations for {date}</h4>
-      <div className="row">
-        <div className="col-6">
+      <h4 style={{ marginBottom: 20 }}>{date}</h4>
+      <div className="reservationsAndTables">
+        <div className="col-sm-6">
           <hr />
           <h4 justify-content="center">Reservations</h4>
           <ErrorAlert error={reservationsError} />
           <Reservations reservations={reservations} />
           <hr />
         </div>
-        <div className="col-1"></div>
-        <div className="col-3">
+        <div className="col-sm-1"></div>
+        <div className="col-sm-5">
           <hr />
           <h4 justify-content="center">Tables</h4>
           <hr />

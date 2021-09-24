@@ -117,9 +117,9 @@ function Reservations({ reservations }) {
       };
     })
   ) : (
-    <div>
+    <div className="noReservations">
       <hr />
-      <h6 className="d-flex justify-content-center">No Reservations</h6>
+      <h6>No Reservations</h6>
     </div>
   );
 }

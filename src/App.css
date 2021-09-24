@@ -1,69 +1,93 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Tangerine:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Tangerine:wght@700&display=swap");
 
 #title {
-    font-family: 'Alegreya';
-    font-size: 60px;
+  font-family: "Alegreya";
+  font-size: 60px;
 }
 
 h4 {
-    text-align: center;
+  text-align: center;
 }
 
 ul {
-    justify-content: center;
+  justify-content: center;
 }
 
 ul li {
-    margin-right: 20px;
+  margin-right: 20px;
+}
+
+.side-bar {
+  background: #161415 url(./stock_restaurant.jpg) no-repeat top;
+  min-width: 360px;
+}
+
+.bg {
+  height: 100vh;
 }
 
 .dateButton {
-    margin-right: 10px;
-    background-color: #9b0000;
-    color:rgb(255, 255, 255);
+  margin-right: 10px;
+  background-color: #9b0000;
+  color: rgb(255, 255, 255);
 }
 
 .dateButtonGroup {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .submitButton {
-    background-color: #009b15;
-    color: rgb(255, 255, 255);
-    width: 100px;
-    margin-right: 10px;
+  background-color: #009b15;
+  color: rgb(255, 255, 255);
+  width: 100px;
+  margin-right: 10px;
 }
 
 .seatButton {
-    background-color: #009b15;
-    color: rgba(255, 255, 255, 0.925);
-    width: 100px;
-    margin-bottom: 5px;
+  background-color: #009b15;
+  color: rgba(255, 255, 255, 0.925);
+  width: 100px;
+  margin-bottom: 5px;
 }
 
 .editButton {
-    background-color: rgb(238, 255, 0);
-    color: rgb(0, 0, 0);
-    width: 100px;
-    margin-bottom: 5px;
+  background-color: rgb(238, 255, 0);
+  color: rgb(0, 0, 0);
+  width: 100px;
+  margin-bottom: 5px;
 }
 
 .findButton {
-    background-color: #009b15;
-    color: white;
-    width: 100px;
+  background-color: #009b15;
+  color: white;
+  width: 100px;
 }
 
 .clearButton {
-    background-color: #00a8be;
-    color: white;
-    width: 70px;
+  background-color: #00a8be;
+  color: white;
+  width: 70px;
 }
 
 .cancelButton {
-    background-color: #9b0000;
-    color: white;
-    width: 100px;
+  background-color: #9b0000;
+  color: white;
+  width: 100px;
 }
+
+.reservationsAndTables {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  text-align: center;
+}
+
+/* @media all and (max-width: 480px) {
+  .reservationsAndTables {
+    flex-direction: column;
+    align-items: center;
+  }
+} */
