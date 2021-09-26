@@ -15,7 +15,6 @@ import "../App.css";
  */
 function Dashboard({ date }) {
   const dateObj = new Date(date);
-  console.log(dateObj.getDay())
   const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const day = (dateObj.getDay() === 6) ? "Sunday" : days[dateObj.getDay() + 1];

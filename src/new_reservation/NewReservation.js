@@ -52,7 +52,6 @@ function NewReservation() {
   };
   const handleReservationDateChange = async (event) => {
     await setReservationDate(event.target.value);
-    console.log(typeof reservation_date, reservation_date);
   };
   const handleReservationTimeChange = (event) => {
     setReservationTime(event.target.value);
