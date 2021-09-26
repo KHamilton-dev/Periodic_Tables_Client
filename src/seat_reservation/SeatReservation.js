@@ -61,13 +61,14 @@ function SeatReservation() {
       <ErrorAlert error={tablesError} />
       <button
         type="submit"
-        className="submitButton"
+        className="btn btn-success"
+        style={{ marginRight: 10 }}
         onClick={() => handleSubmit(Number(reservation_id))}
       >
         Submit
       </button>
       <button type="button" 
-      className="cancelButton"
+      className="btn btn-danger"
       onClick={() => history.goBack()}>
         Cancel
       </button>

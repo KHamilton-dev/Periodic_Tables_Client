@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router";
 import { editReservation } from "../utils/api";
-import "../App.css"
+import "../App.css";
 
 function Reservations({ reservations }) {
   const history = useHistory();
@@ -49,19 +49,25 @@ function Reservations({ reservations }) {
         return (
           <div key={reservation.reservation_id}>
             <hr />
-            <div className="row align-items-center" style={{ marginTop: 25 }}>
-              <div className="col-6">
+            <div
+              className="row justify-content-space-between"
+              style={{ marginTop: 25 }}
+            >
+              <div className="col">
                 <h5>
                   {reservation.first_name} {reservation.last_name}{" "}
-                  {reservation.reservation_time.slice(0, -3)}
                 </h5>
+                <h5>{reservation.reservation_time.slice(0, -3)}</h5>
                 <h5>Party of {reservation.people}</h5>
-                <h5 data-reservation-id-status={reservation.reservation_id} style={{ marginTop: 30 }}>
-                   {reservation.status.charAt(0).toUpperCase() + reservation.status.slice(1)} 
+                <h5
+                  data-reservation-id-status={reservation.reservation_id}
+                >
+                  {reservation.status.charAt(0).toUpperCase() +
+                    reservation.status.slice(1)}
                 </h5>
               </div>
               {reservation.status === "booked" ? (
-                <div className="col-3">
+                <div className="col-4">
                   <div className="row">
                     <button
                       className="btn btn-success"
@@ -90,7 +96,7 @@ function Reservations({ reservations }) {
                   </div>
                   <div className="row">
                     <button
-                      className="btn btn-danger"
+                      className="btn btn-danger btn-block"
                       style={{ marginBottom: 5 }}
                       data-reservation-id-cancel={reservation.reservation_id}
                       onClick={() => cancelClickHandler(reservation)}
@@ -113,8 +119,8 @@ function Reservations({ reservations }) {
           //   </p>
           // </div>
           <></>
-        )
-      };
+        );
+      }
     })
   ) : (
     <div className="noReservations">

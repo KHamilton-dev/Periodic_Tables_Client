@@ -13,12 +13,12 @@ import "../App.css";
  */
 function Layout() {
   return (
-    <div className="container-fluid bg">
-      <div className="row">
-        <div className="col-md-2 side-bar" style={{ paddingBottom: 10 }}>
+    <div id="main-container" className="container-fluid d-flex bg">
+      <div className="row flex-fill">
+        <div className="col-md-2 side-bar" style={{ paddingBottom: 30 }}>
           <Menu />
         </div>
-        <div className="col">
+        <div id="routes-div" className="col">
           <Routes />
         </div>
       </div>

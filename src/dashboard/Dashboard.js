@@ -14,6 +14,13 @@ import "../App.css";
  * @returns {JSX.Element}
  */
 function Dashboard({ date }) {
+  const dateObj = new Date(date);
+  console.log(dateObj.getDay())
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const day = (dateObj.getDay() === 6) ? "Sunday" : days[dateObj.getDay() + 1];
+  const month = months[dateObj.getMonth()];
+
   const [reservations, setReservations] = useState([]);
   const [reservationsError, setReservationsError] = useState(null);
   const [tables, setTables] = useState([]);
@@ -43,25 +50,25 @@ function Dashboard({ date }) {
       </h1>
       <div className="dateButtonGroup">
         <button
-          className="btn btn-primary"
+          className="btn btn-success"
           onClick={() => history.push(`/dashboard?date=${previous(date)}`)}
         >
           Previous
         </button>
         <button 
-        className="btn btn-success" 
+        className="btn btn-primary" 
         onClick={() => history.push("/")}>
           Today
         </button>
         <button
-          className="btn btn-primary"
+          className="btn btn-success"
           onClick={() => history.push(`/dashboard?date=${next(date)}`)}
         >
           Next
         </button>
       </div>
       <br />
-      <h4 style={{ marginBottom: 20 }}>{date}</h4>
+      <h4 style={{ marginBottom: 10 }}>{day}, {month} {dateObj.getDate() + 1}</h4>
       <div className="reservationsAndTables">
         <div className="col-sm-6">
           <hr />

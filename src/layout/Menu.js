@@ -13,7 +13,6 @@ function Menu() {
   return (
     <nav className="navbar navbar-dark align-items-start p-0">
       <div className="container-fluid d-flex flex-column p-0">
-      {/* removed flex-column from above */}
         <Link
           className="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0"
           to="/"
@@ -23,10 +22,10 @@ function Menu() {
           </div>
         </Link>
 
-        <ul className="nav navbar-nav text-light flex-row" style={{ marginBottom: 20, marginLeft: 20 }} id="accordionSidebar">
+        <ul className="nav navbar-nav flex-row" style={{ marginLeft: 20 }}>
           <li className="nav-item">
             <a className="nav-link" href="/dashboard">
-              <span className="oi oi-dashboard" />
+              <span className="oi oi-dashboard"/>
               &nbsp;Dashboard
             </a>
           </li>
