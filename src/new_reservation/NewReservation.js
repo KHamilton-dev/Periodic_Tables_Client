@@ -50,8 +50,8 @@ function NewReservation() {
   const handleMobileNumberChange = (event) => {
     setMobileNumber(event.target.value);
   };
-  const handleReservationDateChange = async (event) => {
-    await setReservationDate(event.target.value);
+  const handleReservationDateChange = (event) => {
+    setReservationDate(event.target.value);
   };
   const handleReservationTimeChange = (event) => {
     setReservationTime(event.target.value);
